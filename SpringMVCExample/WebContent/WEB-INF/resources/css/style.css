@@ -1,0 +1,9 @@
+p {
+	color:#dd7127;
+}
+a {
+	text-decoration: underline;
+}
+.footer {
+	font-family: verdana; padding: 10px; border-radius: 10px; font-size: 12px; text-align: center;
+}

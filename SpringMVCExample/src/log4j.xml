@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j='http://jakarta.apache.org/log4j/'>
+    <appender name="CA" class="org.apache.log4j.ConsoleAppender">
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%-4r [%t] %-5p %c %x - %m%n" />
+        </layout>
+    </appender>
+    <appender name="RFA" class="org.apache.log4j.RollingFileAppender">
+        <param name="File" value="sample.log" />
+        <param name="ImmediateFlush" value="true" />
+        <param name="MaxFileSize" value="5KB" />
+        <param name="MaxBackupIndex" value="5" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%-4r [%t] %-5p %c %x - %m%n" />
+        </layout>
+    </appender>
+    <root>
+        <level value="DEBUG" />
+        <appender-ref ref="CA" />
+        <appender-ref ref="RFA" />
+    </root>
+</log4j:configuration>
